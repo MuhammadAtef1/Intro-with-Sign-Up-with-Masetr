@@ -1,0 +1,194 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Poppins;
+}
+:root {
+    --Red: hsl(0, 100%, 74%); 
+--Green: hsl(154, 59%, 51%);
+--Blue: hsl(248, 32%, 49%);
+--Dark-Blue: hsl(249, 10%, 26%) ;
+--Grayish-Blue: hsl(246, 25%, 77%);
+}
+.flex {
+    display: flex;
+    align-items: center;
+}
+body {
+    background-color: hsla(246, 25%, 77%, 0.438);
+}
+.container {
+    margin: auto;
+    width: 100%;
+    flex-direction: column;
+    padding: 30px 20px;
+    justify-content: space-between;
+    background-image:linear-gradient(to bottom, rgba(255, 0, 0, 0.493), rgba(255, 0, 0, 0.493)),
+    url('./images/bg-intro-mobile.png');
+}
+.form-data {
+    width: 100%;
+    height: 40%;
+}
+.form-data h2 {
+    color: white;
+    padding:0px 40px 10px;
+    text-align: center;
+    
+}
+.form-data p {
+    color: rgba(255, 255, 255, 0.685);
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 0px 30px;
+}
+.form-container {
+    width: 100%;
+    height: 70%;
+    flex-direction: column;
+}
+.try-icon {
+    width: 100%;
+    background-color: var(--Blue);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    color: rgba(255, 255, 255, 0.685);
+    text-align: center;
+    padding: 10px 50px;
+    box-shadow: 0 0 16px 7px #0000001c;
+}
+.try-icon span {
+    color: white;
+    font-weight: bold;
+}
+form {
+    flex-direction: column;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 15px;
+}
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.116);
+    outline: none;
+    caret-color: var(--Blue);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+form input::placeholder {
+    color: rgba(0, 0, 0, 0.651);
+    font-size: 11px;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+}
+form input:focus::placeholder {
+    color: transparent;
+}
+.submit {
+    background-color: var(--Green);
+    color: white;
+    cursor: pointer;
+}
+form p {
+    padding: 5px 15px;
+    color:rgba(0, 0, 0, 0.459);
+    font-size: 10px;
+    text-align: center;
+}
+form p span {
+    color: var(--Red);
+    font-weight: bold;
+    cursor: pointer;
+}
+.f-name ,
+.l-name ,
+.email ,
+.pass {
+    color: var(--Red);
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -15px;
+    display: none;
+}
+.input-sign-f,
+.input-sign-l,
+.input-sign-e,
+.input-sign-p {
+    width: 100%;
+    position: relative;
+}
+.input-sign-f img,
+.input-sign-l img,
+.input-sign-e img,
+.input-sign-p img {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    transform: translateY(40%);
+    -webkit-transform: translateY(40%);
+    -moz-transform: translateY(40%);
+    -ms-transform: translateY(40%);
+    -o-transform: translateY(40%);
+    display: none;
+}
+
+
+.attribution {
+    margin-top: 50px;
+    text-align: center;
+}
+.attribution a {
+    text-decoration: none;
+}
+.attribution a:nth-last-child(1) {
+    text-decoration: none;
+    font-weight: bold;
+    color: blueviolet;
+}
+
+
+
+@media (min-width:500px) {
+    .container {
+        width: 375px;
+    }
+}
+
+
+@media (min-width:1000px) {
+    .container {
+        margin-top: 50px;
+        width: 80%;
+        height: 70%;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        box-shadow: 0 0 16px 7px #0000003b;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 1fr;
+        gap: 20px;
+}
+.form-container {
+    height: 100%;
+}
+}
